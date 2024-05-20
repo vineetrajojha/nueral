@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Details</title>
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+  <div class="back-button">&larr;</div>
+  <h1>ENTER YOUR PAN DETAILS</h1>
+  <p class="subtitle">Let us do the paperwork.</p>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="financial-year">Financial Year *</label>
+      <select id="financial-year" class="form-control">
+        <option value="" selected>Select Financial Year</option>
+        <!-- Add options for financial years -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="pan-number">PAN Number *</label>
+      <input type="text" id="pan-number" class="form-control" placeholder="Enter PAN Number">
+    </div>
+
+    <div class="form-group">
+      <label for="date-of-birth">Date of Birth *</label>
+      <input type="text" id="date-of-birth" class="form-control" placeholder="dd-mm-yyyy">
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button class="btn btn-secondary" id="getCA">GET CA ASSISTED</button>
+    <button class="btn btn-primary" id="continue" onclick="location.href='personal.html'">CONTINUE &rarr;</button>
+  </div>
+
+  <script src="details.js"></script>
+</body>
+</html>
