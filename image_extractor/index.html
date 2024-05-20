@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxify's Blog</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="experience" class="experience">
+        <h2>Upload your Documents.</h2>
+        <div class="exp-item">
+            <div class="card1">
+                <i class="fa-solid fa-file"></i>
+                <h2>Services Related to ITR Filing</h2>
+                <h4>Automated ITR Filing</h4>
+            </div>
+            <div class="card2">
+                <i class="fa-solid fa-camera"></i>
+                <h2>Upload a Picture or PDF</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="fileUpload" class="custom-file-upload">
+                        <input type="file" id="fileUpload" name="fileUpload" style="display:none;">
+                        Choose File
+                    </label>
+                    <span id="selectedFileName"></span>
+                    <br>
+                    <button type="button" onclick="openFileExplorer()" style="margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Upload</button>
+                </form>
+                <script>
+                    document.getElementById('fileUpload').addEventListener('change', function() {
+                        var fileName = this.value.split("\\\\").pop();
+                        document.getElementById('selectedFileName').innerHTML = "Selected File: " + fileName;
+                    });
+
+                    function openFileExplorer() {
+                        document.getElementById('fileUpload').click();
+                    }
+                </script>
+            </div>
+            <div class="card3">
+                <i class="fa-solid fa-pencil yellow2"></i>
+                <h2>Write a review.</h2>
+                <button class="custom-rating-button">Rate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
